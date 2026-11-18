@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Grand Resort — Fine Dining, Private Cabins &amp; Fast Food | Villagam, Ramhall</title>
+  <meta name="description" content="Authentic Taste, Great Coffee, Private Dining Cabins & Fresh Fast Food at Higher Sec Road, Villagam, Ramhall (193222). Order directly via WhatsApp or visit New Grand Resort." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display (Luxury Headings) & Plus Jakarta Sans (Clean Modern UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0b0e0d',
+            charcoal: '#121715',
+            cardbg: '#161c1a',
+            emeraldBrand: '#10b981',
+            emeraldDark: '#059669',
+            goldBrand: '#f59e0b',
+            goldDark: '#d97706',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0b0e0d;
+      --bg-secondary: #121715;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: #f3f4f6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      padding-bottom: 92px;
+    }
+
+    .glass-panel {
+      background: rgba(22, 28, 26, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-header {
+      background: rgba(11, 14, 13, 0.86);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hero-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.14) 0%, rgba(245, 158, 11, 0.05) 45%, rgba(11, 14, 13, 0) 75%);
+    }
+
+    .veg-badge {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #10b981;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .veg-badge::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+    }
+
+    .nonveg-badge {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #ef4444;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .nonveg-badge::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 4.5px solid transparent;
+      border-right: 4.5px solid transparent;
+      border-bottom: 8px solid #ef4444;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0.4; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-slide-up {
+      animation: slideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- =====================================================================
+       1. STICKY TOP HEADER
+  ====================================================================== -->
+  <header class="sticky top-0 z-40 glass-header">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+      <!-- Brand Identity + Google Rating Pill -->
+      <div class="flex items-center gap-2.5 min-w-0">
+        <a href="#" class="flex items-center gap-2 group truncate">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-serif font-bold text-lg shadow-lg shadow-emerald-950/50 shrink-0">
+            N
+          </div>
+          <span class="font-extrabold tracking-tight text-white text-sm sm:text-base md:text-lg truncate">
+            NEW GRAND RESORT
+          </span>
+        </a>
+        <!-- Rating Pill -->
+        <div class="hidden xs:inline-flex sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[11px] sm:text-xs font-semibold shrink-0">
+          <span>★ 4.8</span>
+          <span class="text-amber-300/75 hidden md:inline">(71 Reviews)</span>
+        </div>
+      </div>
+
+      <!-- Quick Nav & Cart Button -->
+      <div class="flex items-center gap-3 sm:gap-5 shrink-0">
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+          <a href="#menu" class="hover:text-emerald-400 transition-colors">Menu</a>
+          <a href="#gallery" class="hover:text-emerald-400 transition-colors">Dining &amp; Cabins</a>
+          <a href="#location" class="hover:text-emerald-400 transition-colors">Visit &amp; Info</a>
+        </nav>
+
+        <button onclick="openCheckoutModal()" class="relative inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-semibold text-white transition active:scale-95">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span>Cart</span>
+          <span id="header-cart-badge" class="px-1.5 py-0.5 text-[11px] font-bold rounded-full bg-emerald-500 text-obsidian">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       2. HERO SECTION
+  ====================================================================== -->
+  <section class="relative pt-10 pb-12 sm:pt-16 sm:pb-16 hero-glow border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Status & Google Rating Pills -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-5">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Direct WhatsApp Ordering • Delivery, Drive-Through &amp; Private Cabins
+        </span>
+        <span class="sm:hidden inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">
+          ★ 4.8 (71 Reviews)
+        </span>
+      </div>
+
+      <!-- Compelling Headline -->
+      <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] max-w-4xl mx-auto">
+        Authentic Taste, <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Private Dining &amp; Fresh Food</span> in Villagam
+      </h1>
+
+      <!-- Subtext -->
+      <p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Dine in our spacious Main Hall or quiet Private Cabins for couples, solo guests &amp; families—prepared fresh in our dedicated kitchen at <span class="text-white font-medium">Higher Sec Road, Villagam Ramhall</span>.
+      </p>
+
+      <!-- Primary CTAs -->
+      <div class="mt-7 sm:mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto">
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian font-bold text-sm sm:text-base shadow-lg shadow-emerald-500/20 transition transform active:scale-95">
+          <span>Explore Menu</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+
+        <a id="hero-directions-btn" href="https://maps.app.goo.gl/eXGkCHjZvGR6XXiz9?g_st=ac" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-sm sm:text-base transition active:scale-95">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>Get Directions</span>
+        </a>
+      </div>
+
+      <!-- 3 Trust Feature Cards -->
+      <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-5 text-left">
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg shrink-0">
+            ★
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm sm:text-base">4.8 Google Rated</h3>
+            <p class="text-xs text-gray-400 mt-0.5">71+ reviews • Known for crispy food &amp; great coffee</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg shrink-0">
+            🛋️
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm sm:text-base">Main Hall &amp; Private Cabins</h3>
+            <p class="text-xs text-gray-400 mt-0.5">Cozy enclosed rooms for couples, solo &amp; family dining</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-300 text-lg shrink-0">
+            🛵
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm sm:text-base">Fast Delivery &amp; Drive-Thru</h3>
+            <p class="text-xs text-gray-400 mt-0.5">Freshly cooked in our separate kitchen • Free parking</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. INTERACTIVE DIGITAL MENU & CART SYSTEM
+  ====================================================================== -->
+  <section id="menu" class="py-12 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Breakfast • Lunch • Dinner • Late-Night</span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white mt-1">Signature Menu</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-400 flex items-center gap-1.5">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+          Tap <strong class="text-white">+ Add</strong> on any dish to build your WhatsApp order
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="category-tabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Menu Cards Grid -->
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5">
+        <!-- Populated dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. RESORT SPACES & AMBIANCE GALLERY (DYNAMICALLY RENDERED FROM CONFIG)
+  ====================================================================== -->
+  <section id="gallery" class="py-12 sm:py-16 bg-charcoal/70 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Inside New Grand Resort</span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white mt-1">Main Hall, Private Cabins &amp; Kitchen</h2>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium self-start md:self-auto">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          <span>Main Dining Hall • Private Cabins • Separate Kitchen</span>
+        </div>
+      </div>
+
+      <!-- 4-Card Visual Grid (Rendered via JS from CONFIG.gallery for easy image updates) -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Populated dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. VISIT, AMENITIES & DIRECT ORDER INFO SECTION
+  ====================================================================== -->
+  <section id="location" class="py-12 sm:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-white/10 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Visit Us or Order Direct</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1.5">NEW GRAND RESORT</h2>
+            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+              Rated <strong class="text-amber-400">4.8 ★ (71 Reviews)</strong> on Google. Enjoy fresh dishes prepared in our separate kitchen—served in our Main Hall, Private Cabins, or delivered to your door.
+            </p>
+
+            <div class="mt-6 space-y-4 text-sm">
+              <!-- Address -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
+                  📍
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Address</p>
+                  <p class="text-gray-300">Higher Sec Road, Villagam Ramhall, Jammu and Kashmir 193222</p>
+                </div>
+              </div>
+
+              <!-- Seating & Service Options -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                  🍽️
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Dining &amp; Service Options</p>
+                  <p class="text-gray-300">Main Hall • Private Dining Cabins • Takeout • Drive-Through • No-Contact Delivery</p>
+                </div>
+              </div>
+
+              <!-- Amenities & Payments -->
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-purple-300 shrink-0 mt-0.5">
+                  💳
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Amenities &amp; Payments</p>
+                  <p class="text-gray-300">Separate Hygiene Kitchen • Free Parking Lot • Restroom • UPI / NFC &amp; Cards Accepted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Card -->
+          <div class="bg-obsidian/80 border border-white/10 rounded-2xl p-6 flex flex-col justify-between space-y-5">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-semibold mb-3">
+                Direct Desk • 060060 34214
+              </div>
+              <h3 class="text-lg font-bold text-white">Private Cabin Reservation &amp; Events</h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">
+                Want to reserve a private cabin for a quiet meal, couple dinner, or kids' birthday celebration? Message us on WhatsApp or call our desk.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <button onclick="sendDirectInquiry()" class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian font-bold text-sm flex items-center justify-center gap-2 transition active:scale-95">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                </svg>
+                <span>Chat on WhatsApp</span>
+              </button>
+
+              <a id="direct-call-btn" href="tel:+916006034214" class="w-full py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-sm flex items-center justify-center gap-2 transition active:scale-95">
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call 060060 34214</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Footer -->
+      <footer class="mt-10 text-center text-xs text-gray-500">
+        <p>© 2026 New Grand Resort • Higher Sec Road, Villagam Ramhall, J&amp;K 193222</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. STICKY BOTTOM WHATSAPP CHECKOUT BAR
+  ====================================================================== -->
+  <div class="fixed bottom-0 inset-x-0 z-40 p-3 sm:p-4 pointer-events-none">
+    <div class="max-w-3xl mx-auto pointer-events-auto">
+      <button
+        id="sticky-whatsapp-bar"
+        onclick="openCheckoutModal()"
+        class="w-full py-3.5 px-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-obsidian font-extrabold text-sm sm:text-base shadow-2xl shadow-emerald-950/90 border border-emerald-300/30 flex items-center justify-between transition transform active:scale-[0.99]"
+      >
+        <div class="flex items-center gap-2.5">
+          <span class="w-7 h-7 rounded-lg bg-obsidian/15 flex items-center justify-center">
+            <svg class="w-4 h-4 text-obsidian" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+          </span>
+          <span id="sticky-bar-text">0 Items Selected • Send Order on WhatsApp</span>
+        </div>
+
+        <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-bold bg-obsidian/15 px-3 py-1 rounded-xl">
+          <span>Checkout</span>
+          <span>→</span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       WHATSAPP ORDER CHECKOUT DRAWER / MODAL
+  ====================================================================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 hidden">
+    <div onclick="closeCheckoutModal()" class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"></div>
+
+    <div class="relative min-h-screen flex items-end sm:items-center justify-center p-0 sm:p-4 pointer-events-none">
+      <div class="w-full max-w-lg bg-charcoal border border-white/15 rounded-t-3xl sm:rounded-3xl shadow-2xl pointer-events-auto animate-slide-up max-h-[90vh] flex flex-col">
+        <div class="p-5 border-b border-white/10 flex items-center justify-between">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white">Your WhatsApp Order</h3>
+            <p class="text-xs text-gray-400">New Grand Resort • Higher Sec Road, Villagam</p>
+          </div>
+          <button onclick="closeCheckoutModal()" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-300 transition">
+            ✕
+          </button>
+        </div>
+
+        <div class="p-5 overflow-y-auto space-y-5">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Selected Dishes</span>
+              <button onclick="clearCart()" class="text-xs text-red-400 hover:underline">Clear All</button>
+            </div>
+            <div id="modal-cart-items" class="space-y-2.5 bg-obsidian/70 border border-white/5 rounded-2xl p-3.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Order Type Toggle -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Order Type</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" id="type-delivery" onclick="setOrderType('Home Delivery')" class="py-2.5 px-2 rounded-xl border border-emerald-500 bg-emerald-500/15 text-emerald-300 text-xs font-bold transition">
+                🛵 Delivery
+              </button>
+              <button type="button" id="type-drivethrough" onclick="setOrderType('Drive-Through / Takeout')" class="py-2.5 px-2 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-xs font-semibold transition">
+                🚗 Drive-Thru
+              </button>
+              <button type="button" id="type-dinein" onclick="setOrderType('Dine-In')" class="py-2.5 px-2 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-xs font-semibold transition">
+                🍽️ Dine-In
+              </button>
+            </div>
+          </div>
+
+          <!-- Seating Preference (Shown only when Dine-In is selected) -->
+          <div id="seating-field-group" class="hidden">
+            <label for="seating-choice" class="block text-xs font-semibold text-gray-300 mb-1">Choose Dining Area *</label>
+            <select id="seating-choice" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/10 text-sm text-white focus:outline-none focus:border-emerald-500">
+              <option value="Main Dining Hall">Main Dining Hall</option>
+              <option value="Private Cabin (Couples / Solo / Family)">Private Cabin (Couples / Solo / Family)</option>
+            </select>
+          </div>
+
+          <!-- Customer Details Form -->
+          <div class="space-y-3">
+            <div>
+              <label for="cust-name" class="block text-xs font-semibold text-gray-300 mb-1">Your Name *</label>
+              <input id="cust-name" type="text" placeholder="e.g., Danish Ahmad" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500" />
+            </div>
+
+            <div id="address-field-group">
+              <label for="cust-address" class="block text-xs font-semibold text-gray-300 mb-1">Delivery Address / Landmark in Villagam or Ramhall *</label>
+              <input id="cust-address" type="text" placeholder="e.g., Near Higher Sec School, Villagam" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500" />
+            </div>
+
+            <div>
+              <label for="cust-notes" class="block text-xs font-semibold text-gray-300 mb-1">Cooking Instructions (Optional)</label>
+              <input id="cust-notes" type="text" placeholder="e.g., Extra crispy, less spicy, no-contact drop" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500" />
+            </div>
+          </div>
+
+          <div id="checkout-error" class="hidden p-3 rounded-xl bg-red-500/15 border border-red-500/30 text-red-300 text-xs font-medium">
+          </div>
+        </div>
+
+        <div class="p-5 border-t border-white/10 bg-obsidian/60 rounded-b-3xl">
+          <div class="flex items-center justify-between text-sm mb-3">
+            <span class="text-gray-400">Grand Total (UPI / Cash / Card)</span>
+            <span id="modal-total-price" class="text-xl font-extrabold text-white">₹0</span>
+          </div>
+          <button onclick="confirmAndSendWhatsApp()" class="w-full py-3.5 px-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition active:scale-95">
+            <span>Confirm &amp; Send on WhatsApp</span>
+            <span>↗</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-msg" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-emerald-500 text-obsidian font-bold text-xs shadow-xl opacity-0 pointer-events-none transition-opacity duration-200">
+    Added to order
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: EASY SELF-EDITABLE IMAGES, MENU & CART ENGINE
+  ====================================================================== -->
+  <script>
+    /**
+     * ===================================================================
+     * HOW TO ADD YOUR OWN PHOTOS (SUPER EASY):
+     * 1. Upload your photos to your GitHub repo (e.g., inside an "images/" folder)
+     *    OR paste any direct image link.
+     * 2. Replace the `image:` URLs inside `gallery` and `menuItems` below
+     *    with `"images/your-photo.jpg"`!
+     * ===================================================================
+     */
+    const CONFIG = {
+      resortName: "NEW GRAND RESORT",
+      whatsappNumber: "916006034214", // Real number: 060060 34214
+      displayPhone: "+916006034214",
+      address: "Higher Sec Road, Villagam Ramhall, Jammu and Kashmir 193222",
+      mapsUrl: "https://maps.app.goo.gl/eXGkCHjZvGR6XXiz9?g_st=ac",
+      currency: "₹",
+
+      // 4 REAL RESORT SPACES (Swap `image` with your own resort photos anytime)
+      gallery: [
+        {
+          badge: "Main Dining Area",
+          badgeColor: "text-amber-400",
+          title: "Spacious Main Hall",
+          subtitle: "Comfortable table service for families & groups",
+          image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          badge: "Couples & Solo Dining",
+          badgeColor: "text-emerald-400",
+          title: "Private Dining Cabins",
+          subtitle: "Cozy enclosed rooms for peaceful, private meals",
+          image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          badge: "Separate Cooking Area",
+          badgeColor: "text-amber-400",
+          title: "Dedicated Hygiene Kitchen",
+          subtitle: "Separate live tandoor, grill & fresh prep kitchen",
+          image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          badge: "Free Parking Available",
+          badgeColor: "text-emerald-400",
+          title: "Resort Exterior & Entrance",
+          subtitle: "Higher Sec Road, Villagam Ramhall",
+          image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+        }
+      ],
+
+      // MENU ITEMS (Swap `image` with your own dish photos anytime)
+      menuItems: [
+        {
+          id: 1,
+          name: "Special Kashmiri Kebabs & BBQ",
+          category: "Kebabs & BBQ",
+          popular: true,
+          isVeg: false,
+          price: 280,
+          description: "Charcoal-grilled minced mutton & chicken seekh kebabs served with fresh walnut & mint chutney.",
+          image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 2,
+          name: "Signature Butter Chicken",
+          category: "Main Course",
+          popular: true,
+          isVeg: false,
+          price: 340,
+          description: "Tender tandoori chicken simmered in a rich, velvety tomato, cashew, and Kashmiri butter gravy.",
+          image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 3,
+          name: "Royal Hyderabadi Biryani",
+          category: "Biryani & Rice",
+          popular: true,
+          isVeg: false,
+          price: 240,
+          description: "Aromatic long-grain saffron basmati rice layered with spiced chicken, caramelized onions & raita.",
+          image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 4,
+          name: "Crispy Fried Chicken & Pizza Combo",
+          category: "Fast Food",
+          popular: true,
+          isVeg: false,
+          price: 249,
+          description: "Guest-favorite crispy fried chicken paired with freshly baked mozzarella cheese pizza & house dips.",
+          image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 5,
+          name: "Signature Resort Cappuccino & Cold Coffee",
+          category: "Coffee & Desserts",
+          popular: true,
+          isVeg: true,
+          price: 120,
+          description: "Freshly brewed frothy espresso cappuccino or chilled blended mocha topped with chocolate drizzle.",
+          image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 6,
+          name: "Kashmiri Wazwan Rogan Josh",
+          category: "Main Course",
+          popular: true,
+          isVeg: false,
+          price: 380,
+          description: "Traditional slow-cooked tender lamb in aromatic Kashmiri red chili & fennel spice gravy.",
+          image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 7,
+          name: "Paneer Tikka Masala",
+          category: "Main Course",
+          popular: false,
+          isVeg: true,
+          price: 260,
+          description: "Chargrilled cottage cheese cubes tossed in a smoky, spiced onion-tomato masala gravy.",
+          image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 8,
+          name: "Crispy Zinger Burger & Kids' Fries Box",
+          category: "Fast Food",
+          popular: false,
+          isVeg: false,
+          price: 180,
+          description: "Crunchy golden-fried chicken fillet with creamy garlic mayo, lettuce & salted crispy fries.",
+          image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          id: 9,
+          name: "Warm Chocolate Brownie & Ice Cream",
+          category: "Coffee & Desserts",
+          popular: false,
+          isVeg: true,
+          price: 150,
+          description: "Fudgy warm chocolate walnut brownie served with vanilla scoop and hot fudge sauce.",
+          image: "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    };
+
+    let selectedCategory = "All";
+    let cart = {};
+    let orderType = "Home Delivery";
+
+    const categories = ["All", "Popular", "Fast Food", "Kebabs & BBQ", "Main Course", "Biryani & Rice", "Coffee & Desserts"];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const callBtn = document.getElementById("direct-call-btn");
+      if (callBtn) callBtn.href = `tel:${CONFIG.displayPhone}`;
+
+      const dirBtn = document.getElementById("hero-directions-btn");
+      if (dirBtn) dirBtn.href = CONFIG.mapsUrl;
+
+      renderCategoryTabs();
+      renderMenuGrid();
+      renderGalleryGrid();
+      updateCartUI();
+    });
+
+    function renderGalleryGrid() {
+      const grid = document.getElementById("gallery-grid");
+      grid.innerHTML = CONFIG.gallery.map(item => {
+        const fallbackImg = `https://placehold.co/600x400/161c1a/10b981?text=${encodeURIComponent(item.title)}`;
+        return `
+          <div class="group relative h-60 rounded-2xl overflow-hidden border border-white/10 bg-cardbg">
+            <img
+              src="${item.image}"
+              onerror="this.src='${fallbackImg}'"
+              alt="${item.title}"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+            <div class="absolute bottom-0 inset-x-0 p-4">
+              <span class="text-[10px] uppercase tracking-wider font-bold ${item.badgeColor}">${item.badge}</span>
+              <h3 class="font-bold text-white text-base">${item.title}</h3>
+              <p class="text-xs text-gray-300 mt-0.5">${item.subtitle}</p>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderCategoryTabs() {
+      const container = document.getElementById("category-tabs");
+      container.innerHTML = categories.map(cat => {
+        const isActive = cat === selectedCategory;
+        return `
+          <button
+            onclick="selectCategory('${cat}')"
+            class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition active:scale-95 ${
+              isActive
+                ? "bg-emerald-500 text-obsidian shadow-md shadow-emerald-500/20"
+                : "bg-cardbg text-gray-300 border border-white/10 hover:border-white/25"
+            }"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join("");
+    }
+
+    function selectCategory(category) {
+      selectedCategory = category;
+      renderCategoryTabs();
+      renderMenuGrid();
+    }
+
+    function renderMenuGrid() {
+      const grid = document.getElementById("menu-grid");
+      const filteredItems = CONFIG.menuItems.filter(item => {
+        if (selectedCategory === "All") return true;
+        if (selectedCategory === "Popular") return item.popular;
+        return item.category === selectedCategory;
+      });
+
+      grid.innerHTML = filteredItems.map(item => {
+        const qty = cart[item.id] || 0;
+        const fallbackImg = `https://placehold.co/400x400/161c1a/10b981?text=${encodeURIComponent(item.name.split(" ")[0])}`;
+
+        return `
+          <div class="glass-panel rounded-2xl p-3.5 sm:p-4 flex gap-3.5 sm:gap-4 items-center justify-between hover:border-emerald-500/30 transition group">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="${item.isVeg ? 'veg-badge' : 'nonveg-badge'}" title="${item.isVeg ? 'Vegetarian' : 'Non-Vegetarian'}"></span>
+                ${item.popular ? `<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/15 text-amber-400">Bestseller</span>` : ''}
+              </div>
+
+              <h3 class="font-bold text-white text-sm sm:text-base leading-snug group-hover:text-emerald-300 transition">
+                ${item.name}
+              </h3>
+
+              <p class="text-xs text-gray-400 mt-1 line-clamp-2 leading-relaxed">
+                ${item.description}
+              </p>
+
+              <div class="mt-3 flex items-center justify-between gap-2">
+                <span class="font-extrabold text-white text-base sm:text-lg">
+                  ${CONFIG.currency}${item.price}
+                </span>
+
+                ${
+                  qty === 0
+                    ? `<button onclick="updateItemQty(${item.id}, 1)" class="px-4 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500 text-emerald-400 hover:text-obsidian border border-emerald-500/40 font-bold text-xs sm:text-sm transition active:scale-95">
+                        + Add
+                      </button>`
+                    : `<div class="inline-flex items-center bg-emerald-500 text-obsidian rounded-xl font-extrabold text-xs sm:text-sm shadow-md shadow-emerald-500/20">
+                        <button onclick="updateItemQty(${item.id}, -1)" class="px-3 py-1.5 hover:bg-emerald-600 rounded-l-xl transition">−</button>
+                        <span class="px-2 min-w-[24px] text-center">${qty}</span>
+                        <button onclick="updateItemQty(${item.id}, 1)" class="px-3 py-1.5 hover:bg-emerald-600 rounded-r-xl transition">+</button>
+                      </div>`
+                }
+              </div>
+            </div>
+
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden bg-obsidian border border-white/10 shrink-0">
+              <img
+                src="${item.image}"
+                onerror="this.src='${fallbackImg}'"
+                alt="${item.name}"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function updateItemQty(itemId, delta) {
+      const currentQty = cart[itemId] || 0;
+      const newQty = currentQty + delta;
+
+      if (newQty <= 0) {
+        delete cart[itemId];
+      } else {
+        cart[itemId] = newQty;
+        if (delta > 0) showToast("Added to order");
+      }
+
+      renderMenuGrid();
+      updateCartUI();
+      renderModalCartItems();
+    }
+
+    function clearCart() {
+      cart = {};
+      renderMenuGrid();
+      updateCartUI();
+      renderModalCartItems();
+    }
+
+    function getCartSummary() {
+      let totalItems = 0;
+      let totalPrice = 0;
+      const itemsList = [];
+
+      for (const [idStr, qty] of Object.entries(cart)) {
+        const item = CONFIG.menuItems.find(m => m.id === Number(idStr));
+        if (item && qty > 0) {
+          totalItems += qty;
+          totalPrice += item.price * qty;
+          itemsList.push({ ...item, qty, subtotal: item.price * qty });
+        }
+      }
+      return { totalItems, totalPrice, itemsList };
+    }
+
+    function updateCartUI() {
+      const { totalItems, totalPrice } = getCartSummary();
+
+      document.getElementById("header-cart-badge").textContent = totalItems;
+      document.getElementById("modal-total-price").textContent = `${CONFIG.currency}${totalPrice}`;
+
+      const barText = document.getElementById("sticky-bar-text");
+      if (totalItems === 0) {
+        barText.textContent = "0 Items Selected • Send Order on WhatsApp";
+      } else {
+        const label = totalItems === 1 ? "1 Item" : `${totalItems} Items`;
+        barText.textContent = `${label} • ${CONFIG.currency}${totalPrice} — Send Order on WhatsApp`;
+      }
+    }
+
+    function renderModalCartItems() {
+      const container = document.getElementById("modal-cart-items");
+      const { itemsList } = getCartSummary();
+
+      if (itemsList.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-4">
+            <p class="text-xs sm:text-sm text-gray-400">Your cart is empty.</p>
+            <button onclick="closeCheckoutModal()" class="mt-2 text-xs font-bold text-emerald-400 hover:underline">
+              + Browse Menu &amp; Add Dishes
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = itemsList.map(item => `
+        <div class="flex items-center justify-between gap-3 py-1.5 border-b border-white/5 last:border-none">
+          <div class="min-w-0 flex-1">
+            <p class="text-xs sm:text-sm font-semibold text-white truncate">${item.name}</p>
+            <p class="text-[11px] text-gray-400">${CONFIG.currency}${item.price} × ${item.qty}</p>
+          </div>
+
+          <div class="flex items-center gap-3 shrink-0">
+            <div class="inline-flex items-center bg-white/10 rounded-lg text-xs font-bold text-white">
+              <button onclick="updateItemQty(${item.id}, -1)" class="px-2.5 py-1 hover:bg-white/10 rounded-l-lg">−</button>
+              <span class="px-1.5">${item.qty}</span>
+              <button onclick="updateItemQty(${item.id}, 1)" class="px-2.5 py-1 hover:bg-white/10 rounded-r-lg">+</button>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-emerald-400 w-14 text-right">
+              ${CONFIG.currency}${item.subtotal}
+            </span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function setOrderType(type) {
+      orderType = type;
+      const activeClass = "py-2.5 px-2 rounded-xl border border-emerald-500 bg-emerald-500/15 text-emerald-300 text-xs font-bold transition";
+      const inactiveClass = "py-2.5 px-2 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-xs font-semibold transition";
+
+      document.getElementById("type-delivery").className = type === "Home Delivery" ? activeClass : inactiveClass;
+      document.getElementById("type-drivethrough").className = type === "Drive-Through / Takeout" ? activeClass : inactiveClass;
+      document.getElementById("type-dinein").className = type === "Dine-In" ? activeClass : inactiveClass;
+
+      const addressGroup = document.getElementById("address-field-group");
+      const seatingGroup = document.getElementById("seating-field-group");
+
+      if (type === "Home Delivery") {
+        addressGroup.classList.remove("hidden");
+        seatingGroup.classList.add("hidden");
+      } else if (type === "Dine-In") {
+        addressGroup.classList.add("hidden");
+        seatingGroup.classList.remove("hidden");
+      } else {
+        addressGroup.classList.add("hidden");
+        seatingGroup.classList.add("hidden");
+      }
+    }
+
+    function openCheckoutModal() {
+      document.getElementById("checkout-error").classList.add("hidden");
+      renderModalCartItems();
+      document.getElementById("checkout-modal").classList.remove("hidden");
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById("checkout-modal").classList.add("hidden");
+    }
+
+    function confirmAndSendWhatsApp() {
+      const { totalItems, totalPrice, itemsList } = getCartSummary();
+      const errorBox = document.getElementById("checkout-error");
+
+      if (totalItems === 0) {
+        errorBox.textContent = "Please add at least one dish from the menu before placing an order.";
+        errorBox.classList.remove("hidden");
+        return;
+      }
+
+      const custName = document.getElementById("cust-name").value.trim();
+      const custAddress = document.getElementById("cust-address").value.trim();
+      const seatingChoice = document.getElementById("seating-choice").value;
+      const custNotes = document.getElementById("cust-notes").value.trim();
+
+      if (!custName) {
+        errorBox.textContent = "Please enter your name so we can confirm your order.";
+        errorBox.classList.remove("hidden");
+        return;
+      }
+
+      if (orderType === "Home Delivery" && !custAddress) {
+        errorBox.textContent = "Please enter your delivery address or landmark in Villagam / Ramhall.";
+        errorBox.classList.remove("hidden");
+        return;
+      }
+
+      errorBox.classList.add("hidden");
+
+      const itemLines = itemsList
+        .map((item, idx) => `${idx + 1}. *${item.name}* × ${item.qty} = ${CONFIG.currency}${item.subtotal}`)
+        .join("\n");
+
+      let message = `*NEW ORDER — ${CONFIG.resortName}*\n`;
+      message += `📍 _${CONFIG.address}_\n`;
+      message += `--------------------------\n`;
+      message += `*Order Type:* ${orderType}\n`;
+      if (orderType === "Dine-In") {
+        message += `*Dining Area:* ${seatingChoice}\n`;
+      }
+      message += `*Customer:* ${custName}\n`;
+      if (orderType === "Home Delivery") {
+        message += `*Address:* ${custAddress}\n`;
+      }
+      if (custNotes) {
+        message += `*Notes:* ${custNotes}\n`;
+      }
+      message += `--------------------------\n`;
+      message += `*Order Items:*\n${itemLines}\n`;
+      message += `--------------------------\n`;
+      message += `*Total Payable:* ${CONFIG.currency}${totalPrice}\n\n`;
+      message += `Please confirm my order. Thank you!`;
+
+      const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function sendDirectInquiry() {
+      const text = `Hello *${CONFIG.resortName}*, I visited your digital menu and would like to inquire about booking a Private Cabin / Main Hall table or menu details.`;
+      const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+      const toast = document.getElementById("toast-msg");
+      toast.textContent = msg;
+      toast.classList.remove("opacity-0");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add("opacity-0");
+      }, 1400);
+    }
+  </script>
+</body>
+</html>
